@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recharge Card Generator</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <h1>RECHARGE CARD GENERATOR</h1>
+    <div class="container- row mt-2">
+        <div class="d-flex flex-column col-lg mx-3">
+        <select id="cardTime" class="d-flex w-50 form-control" >
+            <!-- <option value="" >CHOOSE YOUR OPTION</option> -->
+            <option value="mtn">MTN</option>
+            <option value="glo">GLO</option>
+            <option value="airtel">AIRTEL</option>
+            <option value="9-mobile">9MOBILE</option>     
+        </select>
+        <label for="enteramount">Enter Amount:</label>
+        <input type="number" placeholder="Enter Amount" class="form-control w-50" id="amountCard"><br>
+        <button class="btn btn-success w-50" id="generateData">Generate Pin</button>
+     </div>
+     <div class="d-flex flex-column col-lg mx-3">
+        <h3 class="">Load Card</h3>
+        <input type="text" placeholder="Card Pin" id="loadPins" class="form-control mb-3 w-50"> 
+        <button class="btn btn-success w-50" id="loader">Load Card</button>
+     </div>
+    </div>
+    <table class="table table-bordered table hover mt-3 table-responsive-md">
+        <thead>
+            <tr>
+                <th class="w-25">S/N</th>
+                <th class="w-25">Amount</th>
+                <th class="w-25">Pin</th>
+                <th class="w-25">Card Status</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+</body>
+<script src="generator.js"></script>
+</html>
